@@ -35,7 +35,7 @@ A escolha do raio altera os resultados. Com 1 km e 1,5 km, os objetivos selecion
 Use Python com os módulos `numpy`, `matplotlib`, `Pillow` e os bindings Python do GDAL (`osgeo`). Baixe `GO_setores_CD2022.zip` no diretório oficial do IBGE e use a imagem original `Goiania_Anatel_Agricultura.png` como segundo argumento. O alinhamento por pixels do script é específico dessa imagem de entrada.
 
 ```sh
-python figura15.py GO_setores_CD2022.zip Goiania_Anatel_Agricultura.png
+python figura15.py goiania.gpkg Goiania_Anatel_Agricultura.png
 ```
 
 O script grava `Figura15_Goiania_1km.png` (300 dpi) e `sensibilidade_figura15.csv` no diretório de execução. A rodada de 4 km reproduz o resultado anterior de aproximadamente 200 moradores e 3.111 ha em setores rurais.
