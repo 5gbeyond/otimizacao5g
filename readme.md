@@ -35,6 +35,7 @@ A escolha do raio altera os resultados. Com 1 km e 1,5 km, os objetivos selecion
 Use Python com os módulos `numpy`, `matplotlib`, `Pillow` e os bindings Python do GDAL (`osgeo`). Baixe `GO_setores_CD2022.zip` no diretório oficial do IBGE e use a imagem original `Goiania_Anatel_Agricultura.png` como segundo argumento. O alinhamento por pixels do script é específico dessa imagem de entrada.
 
 ```sh
+bash setup_codespace.sh
 python figura15.py goiania.gpkg Goiania_Anatel_Agricultura.png
 ```
 
