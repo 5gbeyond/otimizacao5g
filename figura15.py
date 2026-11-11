@@ -17,10 +17,9 @@ from PIL import Image
 
 def calculate(archive, baseline):
     gdal.UseExceptions()
-    source = gdal.OpenEx(f"/vsizip/{archive.resolve()}/GO_setores_CD2022.shp",
-                         gdal.OF_VECTOR)
-    layer = source.GetLayer()
-    layer.SetAttributeFilter("CD_MUN = '5208707'")
+    source = gdal.OpenEx(str(archive.resolve()), gdal.OF_VECTOR)
+    layer = source.GetLayer(0)
+    # A linha SetAttributeFilter pode ser mantida ou comentada, já que o gpkg só contém Goiânia
     projected = osr.SpatialReference()
     projected.ImportFromEPSG(31982)
     geographic = osr.SpatialReference()
