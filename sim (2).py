@@ -9,7 +9,7 @@ from PIL import Image
 from shapely import points
 from pyproj import Transformer
 
-g=gp.read_file('zip://go.zip',where="CD_MUN = '5208707'").to_crs(31982).reset_index(drop=True)
+g = gp.read_file('goiania.gpkg').to_crs(31982).reset_index(drop=True)
 print(g.groupby('SITUACAO').v0001.agg(['size','sum']))
 im=np.array(Image.open('Goiania_Anatel_Agricultura.png').convert('RGB'))
 xmin,xmax=-49.4187,-49.1094
